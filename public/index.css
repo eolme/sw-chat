@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, RobotoDraft, 'Noto Sans', 'Open Sans', 'Droid Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+main {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 8px 8px 48px 8px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+form {
+  z-index: 2;
+  position: fixed;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 48px;
+
+  padding: 8px;
+  margin: 0;
+
+  display: flex;
+  align-items: stretch;
+}
+
+form input {
+  flex-shrink: 1;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+form button {
+  flex-shrink: 0;
+  padding: 0 16px;
+  margin-left: 8px;
+}
+
+div {
+  margin-bottom: 8px;
+}
+
+.service {
+  font-size: 0.8em;
+  color: #ccc;
+}
+
+.own,
+.peer {
+  min-width: 0;
+  max-width: 90%;
+
+  overflow: hidden;
+
+  word-wrap: break-word;
+  word-break: break-word;
+
+  padding: 12px;
+}
+
+.own {
+  background-color: #81c784;
+  border-radius: 12px 12px 0 12px;
+  margin-left: auto;
+}
+
+.peer {
+  background-color: #ffd54f;
+  border-radius: 0 12px 12px 12px;
+  margin-right: auto;
+}
+
+#unregister {
+  position: fixed;
+  z-index: 3;
+
+  top: 4px;
+  right: 4px;
+
+  width: 48px;
+  height: 32px;
+
+  font-family: sans-serif, emoji;
+}
+
+button:disabled {
+  opacity: 0.6;
+}

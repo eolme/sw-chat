@@ -1,0 +1,14 @@
+{
+  "name": "sw-chat",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"yarn ws\" \"yarn serve\"",
+    "ws": "node app.js",
+    "serve": "sirv public --cors --dev"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "sirv-cli": "^2.0.2",
+    "uws": "github:uNetworking/uWebSockets.js#v20.14.0"
+  }
+}
