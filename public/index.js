@@ -22,7 +22,7 @@ const rpc = (type, body) => {
 };
 
 input.onkeyup = (event) => {
-  if (event.key === 'Enter') {
+  if (event.key === 'Enter' && input.value !== '') {
     button.click();
   }
 };
@@ -31,6 +31,10 @@ form.onsubmit = (event) => {
   event.preventDefault();
 
   const message = input.value;
+
+  if (message === '') {
+    return;
+  }
 
   input.value = '';
   button.disabled = true;
