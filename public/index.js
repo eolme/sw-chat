@@ -38,7 +38,7 @@ form.onsubmit = (event) => {
   rpc('message', {
     message
   }).then(() => {
-    create('service', 'message send');
+    create('service', 'message sent');
   }).finally(() => {
     button.disabled = false;
   });
@@ -93,6 +93,7 @@ Promise.all([
       if (!initialized) {
         rpc('init', {}).then(() => {
           initialized = true;
+          unregister.hidden = true;
           button.disabled = false;
         });
       }
