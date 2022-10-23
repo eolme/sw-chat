@@ -54,7 +54,7 @@ const rpc = (method, params) => {
         if (message.id === id) {
           socket.removeEventListener('message', handle);
           
-          resolve(new Response(event.data, {
+          resolve(new Response(JSON.stringify(message.result), {
             status: 200
           }));
         }
